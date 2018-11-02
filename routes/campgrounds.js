@@ -20,14 +20,13 @@ router.get("/campgrounds", function (req, res) {
 
 router.post("/campgrounds", function (req, res) {
     var name = req.body.name;
-    var price = req.body.price;
     var image = req.body.image_url;
     var desc = req.body.description;
     var author = {
         id: req.user._id,
         username: req.user.username
     };
-    var newCamp = { name: name, price: price, image: image, description: desc, author: author };
+    var newCamp = { name: name, image: image, description: desc, author: author };
     camp.create(newCamp, function (err) {
         if (err) {
             console.log(err);
