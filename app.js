@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var parser = require("body-parser");
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/yelpcamp", { useNewUrlParser: true });
+mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds249583.mlab.com:49583/yelpcamp");
 var passport = require("passport");
 var localStrategy = require("passport-local");
 var passportLocalMongoose = require("passport-local-mongoose");
