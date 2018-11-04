@@ -1,8 +1,11 @@
 var express = require("express");
 var app = express();
 var parser = require("body-parser");
+require("dotenv").config();
+require("/.env");
 var mongoose = require("mongoose");
-mongoose.connect(process.env.DATABASEURL);
+var db = process.env.DATABASEURL || 'mongodb://localhost/yelpcamp';
+mongoose.connect(db, { useNewUrlParser: true });
 var passport = require("passport");
 var localStrategy = require("passport-local");
 var passportLocalMongoose = require("passport-local-mongoose");
@@ -15,6 +18,7 @@ var comments = require("./models/comments");
 var campground = require("./routes/campgrounds");
 var comment = require("./routes/comments");
 var auth = require("./routes/auth");
+console.log(process.env.DATABASEURL);
 app.use(express.static(__dirname + "/public"));
 // seed();
 
