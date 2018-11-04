@@ -23,7 +23,7 @@ cloudinary.config({
     // api_key: process.env.API_KEY,
     api_key: 146131788677666,
     // api_secret: process.env.API_SECRET
-    api_key: "tfVZFTZWYfOcxLRp9Wc_ueO15nE"
+    api_secret: "tfVZFTZWYfOcxLRp9Wc_ueO15nE"
 });
 
 //============================================//
