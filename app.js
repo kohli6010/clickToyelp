@@ -1,8 +1,7 @@
 var express = require("express");
 var app = express();
 var parser = require("body-parser");
-require("dotenv").config();
-require("/.env");
+require("dotenv").config({ path: '.env' });
 var mongoose = require("mongoose");
 var db = process.env.DATABASEURL || 'mongodb://localhost/yelpcamp';
 mongoose.connect(db, { useNewUrlParser: true });
