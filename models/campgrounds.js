@@ -2,6 +2,7 @@ var mongoose = require("mongoose");
 var campSchema = new mongoose.Schema({
     name: String,
     image: String,
+    imageId: String,
     description: String,
     author: {
         id: {
